@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var config = require('../config'),
+    make = require('./make');
+
+module.exports = (function () {
+
+    var args = process.argv.slice(2),
+        name,
+        conf;
+
+    name = args.length ? args[0] : "mfbg";
+
+    if (args.length) {
+        make(config.get(name));
+    } else {
+        console.log('what?');
+    }
+
+})();
