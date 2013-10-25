@@ -15,7 +15,9 @@
     },
     "main": "./engage.js",
     "bin": "./bin/engage",
-    "dependencies": {},
+    "dependencies": {
+        "col": "0.0.1"
+    },
     "devDependencies": {
         "mocha": "1.13.x",
         "sinon": "1.7.x",
