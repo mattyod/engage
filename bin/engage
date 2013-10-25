@@ -2,11 +2,10 @@
 
 var config = require('../config'),
     make = require('./make')
-    log = require('col'),
-    app = require('../node_modules/whatApp/whatApp');
+    log = require('col');
 
 module.exports = (function () {
-    console.log(app);
+
     var args = process.argv.slice(2),
         name,
         conf;
