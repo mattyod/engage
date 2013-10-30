@@ -7,15 +7,14 @@ var config = require('../config'),
 module.exports = (function () {
 
     var args = process.argv.slice(2),
-        name,
-        conf;
+        name;
 
-    name = args.length ? args[0] : "mfbg";
+    name = args.length ? args[0] : false;
 
-    if (args.length) {
-        make(config.get(name));
+    if (name) {
+        make(name, config.get());
     } else {
-        log.error('what?');
+        log.error('Project name needed');
     }
 
 })();
