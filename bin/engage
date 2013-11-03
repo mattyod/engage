@@ -7,7 +7,8 @@ var config = require('../config'),
 
 // Commands
 var add = require('./commands/add'),
-    remove = require('./commands/remove');
+    remove = require('./commands/remove'),
+    make = require('./make');
 
 module.exports = (function () {
     var cmd = process.argv[2],
@@ -21,6 +22,10 @@ module.exports = (function () {
             break;
         case 'remove':
             remove(act);
+            break;
+        case 'make':
+            make(act);
+            break;
         }
     }
 
@@ -29,20 +34,5 @@ module.exports = (function () {
     case '-v':
         break;
     }
-
-    console.log(cmd, act);
-    // console.log(process.argv);
-    // var x = process.argv[5];
-    // console.log(x);
-    // var args = process.argv.slice(2),
-    //     name;
-
-    // name = args.length ? args[0] : false;
-
-    // if (name) {
-    //     make(name, config.get());
-    // } else {
-    //     log.error('Project name needed');
-    // }
 
 })();

@@ -1,7 +1,15 @@
 'use strict';
 
-var fs = require('fs');
+var rightClick = require('rightClick'),
+    log = require('col'),
+    storage = require('./config').storage;
 
-module.exports = function (map) {
-    console.log('map: ', map);
+module.exports = function (act) {
+
+    rightClick(storage)
+        .copy(act)
+        .paste(process.cwd());
+
+    log.success(act + ' created');
+
 };
