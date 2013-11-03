@@ -16,7 +16,8 @@
     "main": "./engage.js",
     "bin": "./bin/engage",
     "dependencies": {
-        "col": "*"
+        "col": "*",
+        "rightclick": "*"
     },
     "devDependencies": {
         "mocha": "1.13.x",
