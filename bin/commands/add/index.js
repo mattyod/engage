@@ -11,7 +11,7 @@ module.exports = function (act) {
 
     rightClick(process.cwd())
         .copy(act)
-        .paste(storage, act);
+        .paste(storage);
 
     log.success(act + ' now available to use');
 
