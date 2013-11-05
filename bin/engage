@@ -2,13 +2,13 @@
 'use strict';
 
 var config = require('../config'),
-    make = require('./make'),
     log = require('col');
 
 // Commands
 var add = require('./commands/add'),
     remove = require('./commands/remove'),
-    make = require('./make');
+    make = require('./commands/make'),
+    ls = require('./commands/ls');
 
 module.exports = (function () {
     var cmd = process.argv[2],
@@ -23,6 +23,7 @@ module.exports = (function () {
         case 'remove':
             remove(act);
             break;
+            break;
         case 'make':
             make(act);
             break;
@@ -32,6 +33,9 @@ module.exports = (function () {
     // Helper commands
     switch (cmd) {
     case '-v':
+        break;
+    case 'ls':
+        ls();
         break;
     }
 

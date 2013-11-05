@@ -2,7 +2,7 @@
 
 var rightClick = require('rightClick'),
     log = require('col'),
-    storage = require('./config').storage;
+    storage = require('../../config').storage;
 
 module.exports = function (act) {
 
