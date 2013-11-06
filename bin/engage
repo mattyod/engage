@@ -1,42 +1,19 @@
 #!/usr/bin/env node
 'use strict';
 
-var config = require('../config'),
-    log = require('col');
-
 // Commands
-var add = require('./commands/add'),
-    remove = require('./commands/remove'),
-    make = require('./commands/make'),
-    ls = require('./commands/ls');
+var app = {
+    add: require('./commands/add'),
+    remove: require('./commands/remove'),
+    make: require('./commands/make'),
+    init: require('./commands/init'),
+    ls: require('./commands/ls')
+};
 
 module.exports = (function () {
     var cmd = process.argv[2],
         act = process.argv[3];
 
-    // App commands
-    if (act) {
-        switch (cmd) {
-        case 'add':
-            add(act);
-            break;
-        case 'remove':
-            remove(act);
-            break;
-            break;
-        case 'make':
-            make(act);
-            break;
-        }
-    }
-
-    // Helper commands
-    switch (cmd) {
-    case '-v':
-        break;
-    case 'ls':
-        ls();
-        break;
-    }
+    app[cmd] && app[cmd](act);
 
 })();

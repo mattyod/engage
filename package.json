@@ -1,7 +1,7 @@
 {
     "name": "engage",
     "description": "Bootsrap",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "keywords": [],
     "author": {
         "name": "Matthew O'Donoghue"
@@ -13,7 +13,6 @@
     "bugs": {
         "url": "https://github.com/mattyod/engage/issues"
     },
-    "main": "./engage.js",
     "bin": "./bin/engage",
     "dependencies": {
         "col": "*",

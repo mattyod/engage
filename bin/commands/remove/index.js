@@ -6,7 +6,8 @@ var rightClick = require('rightclick'),
 
 module.exports = function (act) {
 
-    rightClick(storage).cut(act);
+    rightClick(storage)
+        .cut(act);
 
     log.success(act + ' removed');
 
