@@ -3,10 +3,13 @@
 var fs = require('fs'),
     rightClick = require('rightClick'),
     log = require('col'),
+    ensure = require('../../utils/ensure-directory'),
     storage = require('../../config').storage;
 
 module.exports = function () {
     var lib = process.mainModule.filename.replace(/\/bin\/engage$/, '/lib');
+
+    ensure(storage);
 
     rightClick(lib)
         .copy(fs.readdirSync(lib))
