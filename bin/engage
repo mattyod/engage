@@ -12,8 +12,9 @@ var app = {
 
 module.exports = (function () {
     var cmd = process.argv[2],
-        act = process.argv[3];
+        act = process.argv[3],
+        tar = process.argv[4];
 
-    app[cmd] && app[cmd](act);
+    app[cmd] && app[cmd](act, tar);
 
 })();

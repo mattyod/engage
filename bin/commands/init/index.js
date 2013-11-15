@@ -10,7 +10,7 @@ module.exports = function () {
     var lib = process.mainModule.filename.replace(/\/bin\/engage$/, '/lib');
 
     ensure(storage);
-
+    console.log(fs.readdirSync(lib));
     rightClick(lib)
         .copy(fs.readdirSync(lib))
         .paste(storage);
